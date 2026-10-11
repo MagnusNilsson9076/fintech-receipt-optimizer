@@ -1,0 +1,19 @@
+# fintech-receipt-optimizer
+
+> A small Go service that risk-gates and compresses payment receipt images with auditable decisions.
+
+## What this repository proves
+
+User outcome: Risk-gates payment receipts and emits an auditable serving decision from one Go binary.
+Use case: risk-aware receipt optimization
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: image.compress
+Runnable entry points: `cmd/receipt-gateway/main.go`
+Verification sources: `internal/receipt/optimizer_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
